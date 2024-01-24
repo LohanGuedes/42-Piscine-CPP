@@ -1,13 +1,13 @@
 NAME = game
 
-CC = c++
+CC = g++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(SRCS)
 	$(CC) $(CPPFLAGS) $(SRCS) -o $(NAME)
 
 fclean:
